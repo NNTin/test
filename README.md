@@ -4,5 +4,5 @@
 
 ---
 
-![](test/animateddiscord.svg?sanitize=1)
-[<img src="test/animateddiscord.svg?sanitize=1">]()
+![](https://cdn.rawgit.com/NNTin/test/fbe3b4e3/test/animateddiscord.svg1)
+[<img src="https://cdn.rawgit.com/NNTin/test/fbe3b4e3/test/animateddiscord.svg">]()
