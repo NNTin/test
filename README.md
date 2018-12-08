@@ -8,4 +8,4 @@
 
 ---
 
-[<img src="https://cdn.rawgit.com/NNTin/test/fbe3b4e3/test/animateddiscord.svg">]()
+[<img src="https://cdn.jsdelivr.net/gh/NNTin/test@fbe3b4e3/test/animateddiscord.svg">]()
