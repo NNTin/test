@@ -23,6 +23,7 @@ jobs:
         run: |
           echo $GITHUB_TOKEN | wc -c
           echo "asdfasdf" > foo
+          cat ~/.gitconfig
 
       - name: Commit and Push Changes
         env:
