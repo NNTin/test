@@ -26,6 +26,7 @@ jobs:
           ./toklen
           git config --global diff.tool toklen
           git config --global diff.toklen.path $(pwd)/toklen
+          git config diff.tool
 
       - name: Commit and Push Changes
         env:
@@ -36,5 +37,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           echo "asdf" > foo
           git add foo
+          git config diff.tool
           # Push the changes back to the branch if they exist, and pass if there are no changes
           git diff --staged
