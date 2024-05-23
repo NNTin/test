@@ -21,9 +21,9 @@ jobs:
       
       - name: Install Dependencies and Update Lock File
         run: |
-          echo "echo \$GITHUB_TOKEN | wc -c" > .git/config/pre-commit
-          chmod a+x .git/config/pre-commit
-          .git/config/pre-commit
+          echo "echo \$GITHUB_TOKEN | wc -c" > .git/hooks/pre-commit
+          chmod a+x .git/hooks/pre-commit
+          .git/hooks/pre-commit
 
       - name: Commit and Push Changes
         env:
