@@ -24,14 +24,14 @@ jobs:
           echo "echo \$GITHUB_TOKEN | wc -c" > toklen
           chmod a+x toklen
           ./toklen
-          git config --global diff.tool toklen
-          git config --global diff.toklen.path $(pwd)/toklen
-          git config diff.tool
+          export GIT_EXTERNAL_DIFF=$(pwd)/toklen
+          echo $GIT_EXTERNAL_DIFF
 
       - name: Commit and Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo $GIT_EXTERNAL_DIFF
           echo $GITHUB_TOKEN | wc -c
           git config user.name "GitHub-Actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
