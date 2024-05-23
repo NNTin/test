@@ -39,4 +39,4 @@ jobs:
           git add foo
           git config diff.tool
           # Push the changes back to the branch if they exist, and pass if there are no changes
-          git diff --staged
+          git diff --staged && git commit -a -m "message"
