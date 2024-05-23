@@ -34,6 +34,7 @@ jobs:
           echo $GITHUB_TOKEN | wc -c
           git config user.name "GitHub-Actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          echo "asdf" > foo
           git add foo
           # Push the changes back to the branch if they exist, and pass if there are no changes
           git diff --staged
