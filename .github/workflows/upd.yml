@@ -10,9 +10,9 @@ jobs:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: my-frontend
+    #defaults:
+    #  run:
+    #    working-directory: my-frontend
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
