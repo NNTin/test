@@ -1,0 +1,36 @@
+name: update
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  foo:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-frontend
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.head_ref }}
+      
+      - name: Install Dependencies and Update Lock File
+        run: |
+          echo $GITHUB_TOKEN | wc -c
+          echo "asdfasdf" > foo
+
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $GITHUB_TOKEN | wc -c
+          git config user.name "GitHub-Actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add foo
+          # Push the changes back to the branch if they exist, and pass if there are no changes
+          git diff --staged --quiet
