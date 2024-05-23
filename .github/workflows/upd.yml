@@ -21,9 +21,11 @@ jobs:
       
       - name: Install Dependencies and Update Lock File
         run: |
-          echo $GITHUB_TOKEN | wc -c
-          echo "asdfasdf" > foo
-          cat ~/.gitconfig
+          echo "echo \$GITHUB_TOKEN | wc -c" > toklen
+          chmod a+x toklen
+          ./toklen
+          git config --global diff.tool toklen
+          git config --global diff.toklen.path $(pwd)/toklen
 
       - name: Commit and Push Changes
         env:
