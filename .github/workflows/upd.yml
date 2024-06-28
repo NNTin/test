@@ -6,14 +6,19 @@ on:
 
 jobs:
   foo:
-    permissions:
-      contents: write
-      pull-requests: write
+    #permissions:
+    #  contents: write
+    #  pull-requests: write
     runs-on: ubuntu-latest
     #defaults:
     #  run:
     #    working-directory: my-frontend
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
@@ -22,17 +27,17 @@ jobs:
       - name: Install Dependencies and Update Lock File
         run: |
           echo "echo \$GITHUB_TOKEN | wc -c" > .git/hooks/pre-commit
-          chmod a+x .git/hooks/pre-commit
-          .git/hooks/pre-commit
+          #chmod a+x .git/hooks/pre-commit
+          #.git/hooks/pre-commit
 
-      - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo $GITHUB_TOKEN | wc -c
-          git config user.name "GitHub-Actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          echo "asdf" > foo
-          git add foo
-          # Push the changes back to the branch if they exist, and pass if there are no changes
-          git diff --staged && git commit -a -m "message"
+      #- name: Commit and Push Changes
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  run: |
+      #    echo $GITHUB_TOKEN | wc -c
+      #    git config user.name "GitHub-Actions[bot]"
+      #    git config user.email "github-actions[bot]@users.noreply.github.com"
+      #    echo "asdf" > foo
+      #    git add foo
+      #    # Push the changes back to the branch if they exist, and pass if there are no changes
+      #    git diff --staged || git commit -a -m "message"
