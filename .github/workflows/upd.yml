@@ -26,9 +26,7 @@ jobs:
       
       - name: Install Dependencies and Update Lock File
         run: |
-          echo "echo \$GITHUB_TOKEN | wc -c" > .git/hooks/pre-commit
-          #chmod a+x .git/hooks/pre-commit
-          #.git/hooks/pre-commit
+          curl -sS -f -I -H "Authorization: token $GITHUB_TOKEN" https://api.github.com | grep -i x-oauth-scopes
 
       #- name: Commit and Push Changes
       #  env:
