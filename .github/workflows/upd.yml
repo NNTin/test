@@ -25,6 +25,8 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref || github.head_ref }}
       
       - name: Install Dependencies and Update Lock File
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -sS -f -I -H "Authorization: token $GITHUB_TOKEN" https://api.github.com | grep -i x-oauth-scopes
 
