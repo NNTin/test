@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Some step
       shell: bash
-      run: echo 'yay'
+      run: echo 'yab'
