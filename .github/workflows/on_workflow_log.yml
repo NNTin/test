@@ -1,0 +1,15 @@
+name: upload
+
+on:
+  workflow_run:
+    workflows: ["build"]
+    types: [completed]
+    branches: '**'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    name: Upload
+    steps:
+      - name: bar
+        run: echo ${{ github.event }}
