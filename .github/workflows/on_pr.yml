@@ -1,0 +1,16 @@
+name: build
+
+on: pull_request
+
+jobs:
+  build:
+    if: github.repository == 'raboof/test'
+    name: "Build workflow"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "refs/pull/${{ github.event.number }}/merge"
+          persist-credentials: false
+      - name: "Cat foo"
+        run: cat foo
