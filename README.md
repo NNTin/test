@@ -21,3 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## RawGit migration
 
 RawGit was shut down and now returns `410 Gone` responses, so the hosted SVG previews were breaking. The CDN links have been updated to [jsDelivr](https://www.jsdelivr.com/?docs=gh), which directly serves GitHub content using the `cdn.jsdelivr.net/gh/<user>/<repo>@<commit>/path` pattern. If you need to pin to a commit, replace `@fbe3b4e3` with your desired commit hash or tag. The old RawGit links are no longer expected to work.
+
+## Some notes section
+
+Some very important notes
