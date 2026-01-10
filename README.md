@@ -22,6 +22,4 @@ RawGit was shut down and now returns `410 Gone` responses, so the hosted SVG pre
 
 ## Some notes section
 
-Some very important notes
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
