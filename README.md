@@ -1,5 +1,9 @@
 # Test Repository
 
+[![Repo size](https://img.shields.io/github/repo-size/NNTin/test)](https://github.com/NNTin/test)
+[![Last commit](https://img.shields.io/github/last-commit/NNTin/test)](https://github.com/NNTin/test/commits)
+[![License](https://img.shields.io/github/license/NNTin/test)](LICENSE)
+
 This repository is only used for testing and quick experiments (for example hosting or previewing sample SVG files). It is not intended for production use.
 
 ![](test/animateddiscord.svg)
