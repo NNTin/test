@@ -13,7 +13,6 @@ previewing sample SVG files). It is not intended for production use.
 
 - [SVG previews](#svg-previews)
 - [RawGit migration](#rawgit-migration)
-- [Notes](#notes)
 
 ## SVG previews
 
@@ -36,38 +35,3 @@ previews were breaking. The CDN links have been updated to
 content using the `cdn.jsdelivr.net/gh/<user>/<repo>@<commit>/path` pattern. If
 you need to pin to a commit, replace `@fbe3b4e3` with your desired commit hash or
 tag. The old RawGit links are no longer expected to work.
-
-## Notes
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium
-tincidunt lacus, nulla gravida orci a odio, sed commodo magna eros quis urna.
-Integer in mauris eu nibh euismod gravida, duis ac tellus et risus vulputate
-vehicula. Donec lobortis risus a elit, etiam tempor, orci eu lobortis elementum,
-lorem odio posuere nisl, id vulputate ligula ipsum at lorem. Nulla facilisi,
-sed posuere purus id neque blandit, sed tincidunt sem tristique. Morbi aliquet
-mauris nec velit pretium, ac bibendum nunc finibus. Vestibulum ante ipsum primis
-in faucibus orci luctus et ultrices posuere cubilia curae; Integer ac dui sed
-urna elementum placerat. Pellentesque habitant morbi tristique senectus et netus
-et malesuada fames ac turpis egestas. Aliquam erat volutpat, sed varius lorem
-sed arcu dignissim, ac varius nunc sagittis. Praesent auctor purus at metus
-volutpat, in ullamcorper turpis laoreet.
-Nam consequat, nibh sed interdum pretium, nisl mauris ullamcorper erat, non
-facilisis odio velit a odio. Vivamus blandit, sapien sit amet facilisis
-vehicula, turpis quam cursus massa, sed fermentum libero lacus nec sapien.
-Suspendisse potenti. In hac habitasse platea dictumst. Fusce euismod justo
-vitae lacus faucibus, vel pharetra urna cursus. Donec scelerisque, mi nec
-finibus varius, urna erat lacinia sapien, sed lacinia magna nibh in risus.
-Vestibulum commodo, enim in cursus viverra, nisi nisi molestie metus, non
-ullamcorper est metus a ante. Cras at elit et odio aliquet bibendum. Nulla
-facilisi. Sed a sapien a justo aliquet feugiat vel a libero. Integer sit amet
-tristique orci, at viverra quam. Etiam quis ligula nisi. Proin varius, mi nec
-gravida venenatis, nisl nulla feugiat tortor, a cursus dui quam in nibh.
-Morbi non tellus nec justo suscipit feugiat. Aenean a lacus ac neque tempor
-aliquam, in luctus enim efficitur. Maecenas a gravida augue, vitae faucibus
-tellus. Integer nec risus quis nulla posuere euismod, sed ultrices elit mattis.
-Hello. This text was written via the web console.
