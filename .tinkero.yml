@@ -1,0 +1,14 @@
+branch: main
+outputDir: dist
+
+nodeVersion: "20"
+
+skipBuild: true
+isSPA: true
+
+env:
+  NODE_ENV: production
+  API_URL: https://lair.nntin.xyz/tinkero/webhook
+  ENABLE_ANALYTICS: "true"
+  ENABLE_DEBUG: "false"
+  CI: "true"
