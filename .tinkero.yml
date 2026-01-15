@@ -1,4 +1,4 @@
-branch: main
+branch: master
 outputDir: dist
 
 nodeVersion: "20"
