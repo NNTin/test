@@ -9,12 +9,6 @@
 This repository is used for testing and quick experiments (for example hosting or
 previewing sample SVG files). It is not intended for production use.
 
-## Notes
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
 ## Contents
 
 - [SVG previews](#svg-previews)
