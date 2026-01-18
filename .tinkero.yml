@@ -8,7 +8,7 @@ isSPA: true
 
 env:
   NODE_ENV: production
-  API_URL: https://lair.nntin.xyz/tinkero/webhook
+  API_URL: https://lair.nntin.xyz/not/used
   ENABLE_ANALYTICS: "true"
   ENABLE_DEBUG: "false"
   CI: "true"
