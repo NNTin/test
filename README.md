@@ -13,7 +13,6 @@ previewing sample SVG files). It is not intended for production use.
 
 - [SVG previews](#svg-previews)
 - [RawGit migration](#rawgit-migration)
-- [Experimental note](#experimental-note)
 
 ## SVG previews
 
@@ -36,8 +35,3 @@ previews were breaking. The CDN links have been updated to
 content using the `cdn.jsdelivr.net/gh/<user>/<repo>@<commit>/path` pattern. If
 you need to pin to a commit, replace `@fbe3b4e3` with your desired commit hash or
 tag. The old RawGit links are no longer expected to work.
-
-## Experimental note
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
