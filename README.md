@@ -12,6 +12,18 @@ previewing sample SVG files). It is not intended for production use.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua.
 
+## Notes
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ligula
+vitae est feugiat ultrices. Vivamus ultricies, nunc in volutpat consequat, nisl
+urna posuere massa, vitae luctus lorem arcu at justo. Cras aliquet, odio id
+tempus pulvinar, turpis ex luctus velit, a dignissim metus augue vel erat.
+Suspendisse potenti. Praesent blandit, sapien vitae tempor faucibus, neque
+magna volutpat mi, eget laoreet sem mauris ac purus. Donec sed tellus, varius
+risus a, tristique lorem. Curabitur vitae turpis eu sem fermentum commodo in vel
+justo. Etiam porta, justo ac consequat egestas, elit nibh posuere purus, nec
+blandit odio nunc sed semper orci.
+
 ## Contents
 
 - [SVG previews](#svg-previews)
