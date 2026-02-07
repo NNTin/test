@@ -20,7 +20,6 @@ jobs:
       - name: Increment counter
         run: |
           cd repo
-          source .venv/bin/activate
           NEW_VALUE=$(python scripts/counter.py)
           echo "NEW_VALUE=$NEW_VALUE" >> "$GITHUB_ENV"
       - name: Commit and push
