@@ -1,0 +1,41 @@
+name: Counter
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  increment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo
+      - name: Increment counter
+        run: |
+          cd repo
+          NEW_VALUE=$(python - <<'PY'
+import json
+from pathlib import Path
+
+path = Path("counter.json")
+value = 0
+if path.exists():
+    data = json.loads(path.read_text())
+    value = int(data.get("value", 0))
+value += 1
+path.write_text(json.dumps({"value": value}))
+print(value)
+PY
+          )
+          echo "NEW_VALUE=$NEW_VALUE" >> "$GITHUB_ENV"
+      - name: Commit and push
+        run: |
+          cd repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add counter.json
+          git commit -m "chore(counter): increment to $NEW_VALUE"
+          git push
