@@ -1,0 +1,42 @@
+name: Debug
+
+on:
+  workflow_dispatch:
+    inputs:
+      should_fail:
+        description: Whether the pipeline should fail
+        type: boolean
+        default: true
+      wait_seconds:
+        description: How long each job should sleep (in seconds)
+        type: number
+        default: 5
+      num_jobs:
+        description: Number of jobs to run in the matrix
+        type: number
+        default: 1
+
+jobs:
+  set_matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.build.outputs.matrix }}
+    steps:
+      - name: Build matrix
+        id: build
+        run: |
+          matrix=$(python3 -c "import json; n=int('${{ inputs.num_jobs }}'); print(json.dumps(list(range(1, n+1))))")
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+
+  matrix_jobs:
+    needs: set_matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        job: ${{ fromJson(needs.set_matrix.outputs.matrix) }}
+    steps:
+      - name: Sleep
+        run: sleep ${{ inputs.wait_seconds }}
+      - name: Fail if requested
+        if: ${{ inputs.should_fail }}
+        run: exit 1
